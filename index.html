@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Surat Saree Factory</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f7f3f3;
+    color:#222;
+}
+
+.container{
+    width:92%;
+    max-width:650px;
+    margin:20px auto;
+}
+
+.card{
+    background:white;
+    border-radius:18px;
+    padding:22px;
+    margin-bottom:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,.10);
+}
+
+.header{
+    text-align:center;
+    background:linear-gradient(135deg,#8b0000,#d4145a);
+    color:white;
+    padding:30px 15px;
+    border-radius:18px;
+    margin-bottom:18px;
+}
+
+.header h1{
+    font-size:27px;
+    margin-bottom:10px;
+}
+
+.header p{
+    font-size:15px;
+}
+
+h2{
+    color:#8b0000;
+    margin-bottom:15px;
+    font-size:21px;
+}
+
+.info{
+    line-height:1.7;
+    font-size:16px;
+}
+
+.highlight{
+    background:#fff3cd;
+    border-left:5px solid #ff9800;
+    padding:14px;
+    border-radius:8px;
+    margin-top:15px;
+    line-height:1.6;
+}
+
+.salary{
+    text-align:center;
+    background:#e8f5e9;
+    padding:18px;
+    border-radius:12px;
+    margin:18px 0;
+}
+
+.salary strong{
+    font-size:25px;
+    color:#168a35;
+}
+
+input, textarea{
+    width:100%;
+    padding:13px;
+    margin:8px 0 13px;
+    border:1px solid #ccc;
+    border-radius:9px;
+    font-size:15px;
+}
+
+textarea{
+    min-height:90px;
+    resize:vertical;
+}
+
+label{
+    font-weight:bold;
+}
+
+.register-btn{
+    width:100%;
+    padding:15px;
+    border:0;
+    border-radius:10px;
+    background:#168a35;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.register-btn:hover{
+    background:#116d29;
+}
+
+.address{
+    line-height:1.7;
+    background:#f8eaea;
+    padding:15px;
+    border-radius:10px;
+}
+
+.footer{
+    text-align:center;
+    padding:20px;
+    color:#666;
+    font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>🌐 SURAT SAREE FACTORY 🌐</h1>
+        <p>Work From Home Registration</p>
+    </div>
+
+    <!-- WORK INFORMATION -->
+    <div class="card">
+        <h2>💼 काम की जानकारी</h2>
+
+        <div class="info">
+            <p>
+                साड़ियों पर कांच और सितारे चिपकाने का काम करना है केवल।
+            </p>
+
+            <p style="margin-top:10px;">
+                साड़ियों पर डिजाइन पहले से ही बनी हुई मिलेगी,
+                जिस पर आपको कांच और सितारे चिपकाने हैं।
+            </p>
+        </div>
+
+        <div class="salary">
+            <p>📦 कार्य लक्ष्य</p>
+            <strong>50 साड़ी / महीना</strong>
+            <br><br>
+            <p>💰 मासिक भुगतान</p>
+            <strong>₹23,500</strong>
+        </div>
+
+        <div class="highlight">
+            <b>⚠️ उपलब्धता:</b><br>
+            केवल 50 महिलाओं की आवश्यकता है।
+        </div>
+    </div>
+
+    <!-- REGISTRATION -->
+    <div class="card" id="registration">
+
+        <h2>📝 Customer Registration</h2>
+
+        <form onsubmit="submitForm(event)">
+
+            <label>Full Name</label>
+            <input
+                type="text"
+                id="name"
+                placeholder="अपना पूरा नाम लिखें"
+                required
+            >
+
+            <label>Mobile No.</label>
+            <input
+                type="tel"
+                id="mobile"
+                placeholder="मोबाइल नंबर"
+                maxlength="10"
+                required
+            >
+
+            <label>Full Address</label>
+            <textarea
+                id="address"
+                placeholder="अपना पूरा पता लिखें"
+                required
+            ></textarea>
+
+            <label>Pincode</label>
+            <input
+                type="text"
+                id="pincode"
+                placeholder="Pincode"
+                maxlength="6"
+                required
+            >
+
+            <label>Registration Fees</label>
+            <input
+                type="text"
+                value="₹500"
+                readonly
+            >
+
+            <button class="register-btn" type="submit">
+                ✅ Register Now
+            </button>
+
+        </form>
+    </div>
+
+    <!-- COURIER -->
+    <div class="card">
+        <h2>📦 Courier Information</h2>
+
+        <div class="info">
+            <p>
+                Courier charge are temporary.
+            </p>
+
+            <p style="margin-top:10px;">
+                Registration या किसी भी payment से पहले
+                सभी शुल्क और शर्तों की जानकारी ग्राहक को स्पष्ट रूप से दी जाएगी।
+            </p>
+        </div>
+    </div>
+
+    <!-- COMPANY ADDRESS -->
+    <div class="card">
+        <h2>🏢 Company Address</h2>
+
+        <div class="address">
+            131, Raghuvir Platinium Market,<br>
+            Near Shyam Sangini Market,<br>
+            Saroli, Surat,<br>
+            Gujarat - 395010
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        © 2026 Surat Saree Factory<br>
+        All Rights Reserved
+    </div>
+
+</div>
+
+<script>
+
+function submitForm(event){
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value;
+
+    const mobile =
+        document.getElementById("mobile").value;
+
+    const address =
+        document.getElementById("address").value;
+
+    const pincode =
+        document.getElementById("pincode").value;
+
+    const message =
+        "SURAT SAREE FACTORY - CUSTOMER REGISTRATION%0A%0A" +
+        "Full Name: " + encodeURIComponent(name) + "%0A" +
+        "Mobile No.: " + encodeURIComponent(mobile) + "%0A" +
+        "Full Address: " + encodeURIComponent(address) + "%0A" +
+        "Pincode: " + encodeURIComponent(pincode) + "%0A" +
+        "Registration Fees: ₹500";
+
+    /*
+      यहाँ अपना वास्तविक WhatsApp नंबर डालें।
+      उदाहरण: 91XXXXXXXXXX
+    */
+
+    const whatsappNumber = "91XXXXXXXXXX";
+
+    window.open(
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        message,
+        "_blank"
+    );
+}
+
+</script>
+
+</body>
+</html>
